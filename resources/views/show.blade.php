@@ -5,7 +5,7 @@
 <div class="container my-5">
     <div class="row align-items-start">
         <!-- Galería de Imágenes (lado izquierdo) -->
-       <div class="container-info">c
+       <div class="container-info">
          <div class="col-lg-6">
             <!-- Imagen Principal -->
             <div class="product-gallery-main mb-3 text-center">
