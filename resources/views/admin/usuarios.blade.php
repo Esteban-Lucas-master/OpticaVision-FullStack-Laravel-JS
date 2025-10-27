@@ -14,8 +14,8 @@
                     <i class="fas fa-eye mr-2"></i> Vista Pública
                 </a>
                     <a href="{{ route('admin.usuarios') }}" 
-                       class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors duration-200">
-                       <i class="fas fa-home mr-1"></i> Inicio
+                   class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors duration-200 border-b-2 border-transparent hover:border-blue-500">
+                   <i class="fas fa-users mr-1"></i> Gestionar Usuarios
                     </a>
                     <a href="{{ route('admin.purchases.history') }}" 
                        class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors duration-200">

@@ -69,8 +69,8 @@
                     @forelse($purchases as $purchase)
                     <tr class="hover:bg-gray-700">
                         <td class="px-4 py-2">{{ $purchase->product->name }}</td>
-                        <td class="px-4 py-2">{{ $purchase->user->name }}</td>
-                        <td class="px-4 py-2">{{ $purchase->product->seller->name ?? 'Sin asignar' }}</td>
+                        <td class="px-4 py-2">{{ $purchase->buyer->name }}</td>
+                        <td class="px-4 py-2">{{ $purchase->seller->name ?? 'Sin asignar' }}</td>
                         <td class="px-4 py-2">{{ $purchase->created_at->format('d/m/Y H:i') }}</td>
                         <td class="px-4 py-2">{{ ucfirst($purchase->status ?? 'pendiente') }}</td>
                     </tr>

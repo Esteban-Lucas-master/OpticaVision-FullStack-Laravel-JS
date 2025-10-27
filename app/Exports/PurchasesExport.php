@@ -14,7 +14,7 @@ class PurchasesExport implements FromCollection, WithHeadings, WithMapping
     */
     public function collection()
     {
-        return Purchase::with(['user', 'product', 'product.seller'])->orderBy('created_at', 'desc')->get();
+        return Purchase::with(['buyer', 'product', 'seller'])->orderBy('created_at', 'desc')->get();
     }
 
     /**
@@ -43,12 +43,11 @@ class PurchasesExport implements FromCollection, WithHeadings, WithMapping
         return [
             $purchase->id,
             $purchase->product->name,
-            $purchase->user->name,
-            $purchase->user->email,
-            $purchase->product->seller->name ?? 'N/A',
+            $purchase->buyer->name,
+            $purchase->buyer->email,
+            $purchase->seller->name ?? 'N/A',
             $purchase->created_at->format('d/m/Y H:i'),
-            ucfirst($purchase->status),
+            ucfirst($purchase->status ?? 'pendiente'),
         ];
     }
 }
-
